@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/',[ContactController::class,'index']);
+Route::get('/confirm',[ContactController::class,'confirm']);

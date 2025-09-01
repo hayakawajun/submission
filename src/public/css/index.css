@@ -5,9 +5,13 @@
 }
 
 .contact-form__heading {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center;
     color: #88796b;
+}
+
+.contact-form__heading h2 {
+    font-family: serif;
 }
 
 .form {
