@@ -11,7 +11,6 @@ class AdminController extends Controller
     public function index()
     {
         $contacts = Contact::with('category')->get();
-        $contacts = Contact::simplePaginate(7);
         $categories = Category::all();
 
         return view('admin',compact('contacts','categories'));
@@ -19,8 +18,9 @@ class AdminController extends Controller
 
     public function search(Request $request)
     {
-        $contact = Contact::with('category')->KeywordSearch($request->$keyword)->get();
+        $contacts = Contact::with('category')->CategorySearch($request->category_id)->GenderSearch($request->gender)->DateSearch($request->date)->KeywordSearch($request->keyword)->get();
+        $categories = Category::all();
 
-        return view('admin',compact('contact'));
+        return view('admin',compact('contacts','categories'));
     }
 }

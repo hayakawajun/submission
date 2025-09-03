@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facade\DB;
 
 class Contact extends Model
 {
@@ -40,10 +39,36 @@ class Contact extends Model
     public function scopeKeywordSearch($query,$keyword)
     {
         if(!empty($keyword)){
-            $query->where('first_name','like','%'.$keyword.'%')
+            $query->whereRaw('CONCAT(last_name," ",first_name) LIKE ? ', '%' . $keyword . '%')
+            ->orWhereRaw('CONCAT(last_name,"",first_name) LIKE ? ', '%' . $keyword . '%')
+            ->orWhereRaw('CONCAT(first_name," ",last_name) LIKE ? ', '%' . $keyword . '%')
+            ->orWhereRaw('CONCAT(first_name,"",last_name) LIKE ? ', '%' . $keyword . '%')
+            ->orWhere('first_name','like','%'.$keyword.'%')
             ->orWhere('last_name','like','%'.$keyword.'%')
-            ->orWhere(DB::raw("CONCAT(last_name,first_name)"),'like','%'.$keyword.'%')
             ->orWhere('email','like','%'.$keyword.'%');
+        }
+        
+    }
+
+    public function scopeGenderSearch($query,$gender)
+    {
+        if($gender='1')    
+        $query->where('gender',1);
+        
+    }
+
+    public function scopeDateSearch($query,$date)
+    {
+        if(!empty($date)){
+            $query->where('created_at','like','%'.$date.'%');
+        }
+        
+    }
+
+    public function scopeCategorySearch($query,$category_id)
+    {
+        if(!empty($category_id)){
+            $query->where('category_id',$category_id);
         }
     }
 }

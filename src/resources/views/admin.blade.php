@@ -16,6 +16,7 @@
             <input class="search-item__input-text" type="text" name="keyword" value="{{ old('keyword') }}" placeholder="名前やメールアドレスを入力してください">
             <select class="search-item__input-gender" name="gender">
                 <option value="">性別</option>
+                <option value="all">全て</option>
                 <option value="1">男性</option>
                 <option value="2">女性</option>
                 <option value="3">その他</option>
@@ -36,7 +37,7 @@
 
     <div class="admin__change-items">
         <button class="admin__export-button" type="submit">エクスポート</button>
-        <div class="admin__pagination">{{ $contacts->links() }}</div>
+        <div class="admin__pagination"></div>
     </div>
 
     <div class="admin-table">
