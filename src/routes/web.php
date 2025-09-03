@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::get('/', function () {
 
 Route::get('/',[ContactController::class,'index']);
 Route::get('/confirm',[ContactController::class,'confirm']);
+
+Route::get('/admin',[AdminController::class,'index']);
+Route::get('/admin/search',[AdminController::class,'search']);
