@@ -25,17 +25,11 @@ class ContactController extends Controller
         return view('confirm',compact('contact'));
     }
 
-    public function store()
+    public function store(Request $request)
     {
+        $contact = $request->all();
+        Contact::create($contact);
+    
         return view('thanks');
     }
-    /**
-    *public function store(ContactRequest $request)
-    *{
-    *    $contact = $request->all();
-    *    Contact::create($contact);
-    *
-    *    return view('thanks');
-    *}
-    */
 }

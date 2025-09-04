@@ -8,7 +8,7 @@
       <div class="confirm__heading">
         <h2 class="alike-angular-regular">Confirm</h2>
       </div>
-      <form class="form" action="/store" method="post">
+      <form class="form" action="/contacts/store" method="post">
         @csrf
         <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}"/>
         <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}"/>
@@ -78,8 +78,6 @@
           <button class="form__button-submit" type="submit">送信</button>
           <button class="form__button-back" type="button" onClick="history.back()" >修正</button>
         </div>
-          
-        
       </form>
     </div>
 @endsection

@@ -16,8 +16,8 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/',[ContactController::class,'index']);
-Route::post('/confirm',[ContactController::class,'confirm']);
-Route::get('/thanks',[ContactController::class,'store']);
+Route::post('/contacts/confirm',[ContactController::class,'confirm']);
+Route::post('/contacts/store',[ContactController::class,'store']);
 
 
 Route::get('/admin',[AdminController::class,'index']);
