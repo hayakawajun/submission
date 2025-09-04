@@ -6,9 +6,9 @@
 @section('content')
     <div class="confirm__content">
       <div class="confirm__heading">
-        <h2>Confirm</h2>
+        <h2 class="alike-angular-regular">Confirm</h2>
       </div>
-      <form class="form" action="/contacts" method="post">
+      <form class="form" action="/store" method="post">
         @csrf
         <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}"/>
         <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}"/>

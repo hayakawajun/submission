@@ -7,7 +7,7 @@
 
 <div class="admin__content">
     <div class="admin__heading">
-        <h2>Admin</h2>
+        <h2 class="alike-angular-regular">Admin</h2>
     </div>
     
     <div class="admin__search-items">

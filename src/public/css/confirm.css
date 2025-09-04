@@ -1,17 +1,23 @@
 .confirm__content {
     margin: 0 auto;
-    padding: 30px 15px;
+    padding: 0 15px;
     max-width: 1000px;
 }
 
 .confirm__heading {
-    margin-bottom: 50px;
+    margin: 30px auto;
     text-align: center;
     color: #88796b;
 }
 
 .confirm__heading h2 {
-    font-family: serif;
+    font-size: 30px;
+}
+
+.alike-angular-regular {
+    font-family: "Alike Angular", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .form {

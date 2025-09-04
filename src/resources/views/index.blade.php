@@ -4,9 +4,9 @@
 @endsection
 
 @section('content')
-      <div class="contact-form__content">
+    <div class="contact-form__content">
       <div class="contact-form__heading">
-        <h2>Contact</h2>
+        <h2 class="alike-angular-regular">Contact</h2>
       </div>
       <form class="form" action="/confirm" method="post">
         @csrf
@@ -20,6 +20,16 @@
             <div class="form__input--text-name">
               <input class="form__input--last-name" type="text" name="last_name" placeholder="例: 山田" value="{{ old('last_name') }}" />
               <input class="form__input--first-name" type="text" name="first_name" placeholder="例: 太郎" value="{{ old('first_name') }}" />
+            </div>
+            <div class="form__error">
+              @error('last_name')
+              {{ $message }}
+              @enderror
+            </div>
+            <div class="form__error">
+              @error('first_name')
+              {{ $message }}
+              @enderror
             </div>
           </div>
         </div>
@@ -40,6 +50,11 @@
               <div class="form__input--radio">
                 <input type="radio" class="form__input--radio-button" name="gender" value="3" id="その他"><label for="その他">その他</label>
               </div>
+            </div>
+            <div class="form__error">
+              @error('gender')
+              {{ $message }}
+              @enderror
             </div>
           </div>
         </div>
@@ -73,10 +88,24 @@
               <input class="form__input-tel" type="tel" name="tel2" placeholder="1234" value="{{ old('tel2') }}" />
               <span class="form__input-tel--hyphen">-</span>
               <input class="form__input-tel" type="tel" name="tel3" placeholder="5678" value="{{ old('tel3') }}" />
-            </div>            
+            </div>
+            <div class="form__error">
+              @error('tel1')
+              {{ $message }}
+              @enderror
+            </div>
+            <div class="form__error">
+              @error('tel2')
+              {{ $message }}
+              @enderror
+            </div>
+            <div class="form__error">
+              @error('tel3')
+              {{ $message }}
+              @enderror
+            </div>
           </div>
         </div>
-        
         <div class="form__group">
           <div class="form__group-title">
             <span class="form__label--item">住所</span>
@@ -85,7 +114,12 @@
           <div class="form__group-content">
             <div class="form__input--text">
               <input class="form__input--address" type="text" name="address" placeholder="例: 東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address') }}" />
-            </div>            
+            </div>
+            <div class="form__error">
+              @error('address')
+              {{ $message }}
+              @enderror
+            </div>
           </div>
         </div>
         
@@ -114,6 +148,11 @@
                 @endforeach
               </select>
             </div>
+            <div class="form__error">
+              @error('category_id')
+              {{ $message }}
+              @enderror
+            </div>
           </div>
         </div>
 
@@ -125,6 +164,11 @@
           <div class="form__group-content">
             <div class="form__input--text-contact">
               <textarea class="form__input--textarea" name="detail" placeholder="お問い合わせ内容をご記載ください">{{ old('content') }}</textarea>
+            </div>
+            <div class="form__error">
+              @error('detail')
+              {{ $message }}
+              @enderror
             </div>
           </div>
         </div>

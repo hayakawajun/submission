@@ -1,0 +1,27 @@
+.thanks {
+    position: relative;
+    display: flex;    
+        align-items: center;
+        justify-content: center;
+
+}
+
+.thanks__message {
+    font-size: 200px;
+    margin: 0 auto;
+   
+}
+
+.thanks__content {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.alike-angular-regular {
+    font-family: "Alike Angular", serif;
+    font-weight: 400;
+    font-style: normal;
+}

@@ -15,12 +15,10 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/',[ContactController::class,'index']);
 Route::post('/confirm',[ContactController::class,'confirm']);
+Route::get('/thanks',[ContactController::class,'store']);
+
 
 Route::get('/admin',[AdminController::class,'index']);
 Route::get('/admin/search',[AdminController::class,'search']);
