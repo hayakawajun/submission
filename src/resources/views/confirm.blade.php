@@ -10,57 +10,73 @@
       </div>
       <form class="form" action="/contacts" method="post">
         @csrf
-        
+        <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}"/>
+        <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}"/>
+        <input type="hidden" name="gender" value="{{ $contact['gender'] }}"/>
+        <input type="hidden" name="email" value="{{ $contact['email'] }}"/>
+        <input type="hidden" name="tel" value="{{ $contact['tel1'].$contact['tel2'].$contact['tel3'] }}"/>
+        <input type="hidden" name="address" value="{{ $contact['address'] }}"/>
+        <input type="hidden" name="building" value="{{ $contact['building'] }}"/>
+        <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}"/>
+        <input type="hidden" name="detail" value="{{ $contact['detail'] }}">
+
+
         <div class="confirm-table">
           <table class="confirm-table__inner">
             <tr class="confirm-table__row">
-              <th class="confirm-table__header">お名前</th>
-              <td class="confirm-table__text">
-                <input type="text" name="name" value="山田"/>
-                <input type="text" name="name" value="太郎"/>
-              </td>
+              <td class="confirm-table__header">お名前</td>
+              <td class="confirm-table__text">{{ $contact['last_name'] }}　{{ $contact['first_name'] }}</td>
             </tr>
             <tr class="confirm-table__row">
-              <th class="confirm-table__header">性別</th>
-              <td class="confirm-table__text">
-                <input type="text" name="name" value="男性"/>
-              </td>
+              <td class="confirm-table__header">性別</td>
+                @if($contact['gender'] == '1')
+                  <td class="confirm-table__text" >男性</td>
+                @elseif($contact['gender'] == '2')
+                  <td class="confirm-table__text" >女性</td>
+                @elseif($contact['gender'] == '3')
+                  <td class="confirm-table__text" >その他</td>
+                @endif
             </tr>
             <tr class="confirm-table__row">
-              <th class="confirm-table__header">メールアドレス</th>
-              <td class="confirm-table__text">
-                <input type="email" name="email" value="test@example.com"/>
-              </td>
+              <td class="confirm-table__header">メールアドレス</td>
+              <td class="confirm-table__text">{{ $contact['email'] }}</td>
             </tr>
             <tr class="confirm-table__row">
-              <th class="confirm-table__header">電話番号</th>
-              <td class="confirm-table__text">
-                <input type="tel" name="tel" value="09012345678"/>
-              </td>
+              <td class="confirm-table__header">電話番号</td>
+              <td class="confirm-table__text">{{ $contact['tel1'].$contact['tel2'].$contact['tel3'] }}</td>
             </tr>
             <tr class="confirm-table__row">
-              <th class="confirm-table__header">住所</th>
-              <td class="confirm-table__text">
-                <input type="text" name="name" value="東京都渋谷区千駄ヶ谷1-2-3"/>
-              </td>
+              <td class="confirm-table__header">住所</td>
+              <td class="confirm-table__text">{{ $contact['address'] }}</td>
             </tr>
             <tr class="confirm-table__row">
-              <th class="confirm-table__header">建物名</th>
-              <td class="confirm-table__text">
-                <input type="text" name="name" value="千駄ヶ谷マンション101"/>
-              </td>
+              <td class="confirm-table__header">建物名</td>
+              <td class="confirm-table__text">{{ $contact['building'] }}</td>
             </tr>
             <tr class="confirm-table__row">
-              <th class="confirm-table__header">お問い合わせ内容</th>
-              <td class="confirm-table__text">
-                <input class="confirm-table__text-contact" type="text" name="content" value="届いた商品が注文した商品ではありませんでした。商品の取り替えをお願いします。"/>
+              <td class="confirm-table__header">お問い合わせの種類</td>
+              @if($contact['category_id'] == '1')
+                  <td class="confirm-table__text" >商品のお届けについて</td>
+                @elseif($contact['category_id'] == '2')
+                  <td class="confirm-table__text" >商品の交換について</td>
+                @elseif($contact['category_id'] == '3')
+                  <td class="confirm-table__text" >商品トラブル</td>
+                @elseif($contact['category_id'] == '4')
+                  <td class="confirm-table__text" >ショップへのお問い合わせ</td>
+                @elseif($contact['category_id'] == '5')
+                  <td class="confirm-table__text" >その他</td>
+              @endif
+            </tr>
+            <tr class="confirm-table__row">
+              <td class="confirm-table__header">お問い合わせ内容</td>
+              <td class="confirm-table__text-detail">{{ $contact['detail'] }}
               </td>
             </tr>
           </table>
         </div>
         <div class="form__button">
           <button class="form__button-submit" type="submit">送信</button>
-          <a class="form__button-back href="">修正</a>
+          <button class="form__button-back" type="button" onClick="history.back()" >修正</button>
         </div>
           
         

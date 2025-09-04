@@ -28,35 +28,30 @@
     width: 100%;
 }
 
+.confirm-table__row {
+    border-bottom: solid 1px #f4f4f4;
+}
+
 .confirm-table__header {
-    padding: 15px 50px;
-    font-weight: 100;
-    width: 40%;
-    border-bottom: 1px solid #f4f4f4;
-    background-color: #bba79a;
     color: #fff;
+    font-size: 13px;
+    padding: 10px 50px;
+    width: 40%;
+    background-color: #bba79a;
 }
 
 .confirm-table__text {
-    padding: 15px 40px;
-    border-bottom: 1px solid #f4f4f4;
-    display: flex;
-    justify-content: flex-start;
+    color: #88796b;
+    font-size: 13px;
+    padding: 10px 50px;
 }
 
-.confirm-table__text input {
-    width: 100%;
-    outline: none;
-    border: none;
+.confirm-table__text-detail {
     color: #88796b;
-}
-
-.confirm-table__text-contact {
-    height: 60px;
-    white-space: normal;
-    outline: none;
-    border: none;
-    color: #88796b;
+    font-size: 13px;
+    padding: 15px 50px;
+    width: 80%;
+    overflow-wrap: break-word;
 }
 
 .confirm-table__row:last-child .confirm-table__header,
@@ -87,4 +82,6 @@
     width: 15%;
     color: #88796b;
     text-decoration: underline;
+    border: none;
+    background-color: #fff;
 }

@@ -8,7 +8,7 @@
       <div class="contact-form__heading">
         <h2>Contact</h2>
       </div>
-      <form class="form" action="/contacts/confirm" method="post">
+      <form class="form" action="/confirm" method="post">
         @csrf
         
         <div class="form__group">
@@ -32,13 +32,13 @@
           <div class="form__group-content">
             <div class="form__input--text-radio">
               <div class="form__input--radio">
-                <input type="radio" class="form__input--radio-button" name="gender" id="男性" checked><label for="男性">男性</label>
+                <input type="radio" class="form__input--radio-button" name="gender" value="1" id="男性" checked><label for="男性">男性</label>
               </div>
               <div class="form__input--radio">
-                <input type="radio" class="form__input--radio-button" name="gender" id="女性"><label for="女性">女性</label>
+                <input type="radio" class="form__input--radio-button" name="gender" value="2" id="女性"><label for="女性">女性</label>
               </div>
               <div class="form__input--radio">
-                <input type="radio" class="form__input--radio-button" name="gender" id="その他"><label for="その他">その他</label>
+                <input type="radio" class="form__input--radio-button" name="gender" value="3" id="その他"><label for="その他">その他</label>
               </div>
             </div>
           </div>
@@ -68,17 +68,12 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text-tel">
-              <input class="form__input-tel" type="tel" name="tel" placeholder="090" value="{{ old('tel') }}" />
+              <input class="form__input-tel" type="tel" name="tel1" placeholder="090" value="{{ old('tel1') }}" />
               <span class="form__input-tel--hyphen">-</span>
-              <input class="form__input-tel" type="tel" name="tel" placeholder="090" value="{{ old('tel') }}" />
+              <input class="form__input-tel" type="tel" name="tel2" placeholder="1234" value="{{ old('tel2') }}" />
               <span class="form__input-tel--hyphen">-</span>
-              <input class="form__input-tel" type="tel" name="tel" placeholder="090" value="{{ old('tel') }}" />
-            </div>
-            <div class="form__error">
-              @error('tel')
-              {{ $message }}
-              @enderror
-            </div>
+              <input class="form__input-tel" type="tel" name="tel3" placeholder="5678" value="{{ old('tel3') }}" />
+            </div>            
           </div>
         </div>
         
@@ -89,13 +84,8 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text">
-              <input class="form__input--address" type="text" name="address" placeholder="例: 東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('email') }}" />
-            </div>
-            <div class="form__error">
-              @error('email')
-              {{ $message }}
-              @enderror
-            </div>
+              <input class="form__input--address" type="text" name="address" placeholder="例: 東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address') }}" />
+            </div>            
           </div>
         </div>
         
@@ -105,12 +95,7 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text">
-              <input class="form__input--address" type="text" name="building" placeholder="例: 千駄ヶ谷マンション101" value="{{ old('email') }}" />
-            </div>
-            <div class="form__error">
-              @error('email')
-              {{ $message }}
-              @enderror
+              <input class="form__input--address" type="text" name="building" placeholder="例: 千駄ヶ谷マンション101" value="{{ old('building') }}" />
             </div>
           </div>
         </div>
@@ -124,6 +109,9 @@
             <div class="form__input--text-category">
               <select class="form__input--select" name="category_id">
                 <option value="">選択してください</option>
+                @foreach( $categories as $category )
+                  <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
+                @endforeach
               </select>
             </div>
           </div>

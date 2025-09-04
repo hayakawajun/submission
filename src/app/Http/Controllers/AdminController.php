@@ -18,7 +18,7 @@ class AdminController extends Controller
 
     public function search(Request $request)
     {
-        $contacts = Contact::with('category')->CategorySearch($request->category_id)->GenderSearch($request->gender)->DateSearch($request->date)->KeywordSearch($request->keyword)->get();
+        $contacts = Contact::with('category')->CategorySearch($request->category_id)->DateSearch($request->date)->KeywordSearch($request->keyword)->get();
         $categories = Category::all();
 
         return view('admin',compact('contacts','categories'));
