@@ -20,6 +20,7 @@ Route::get('/',[ContactController::class,'index']);
 Route::post('/contacts/confirm',[ContactController::class,'confirm']);
 Route::post('/contacts/store',[ContactController::class,'store']);
 
-
-Route::get('/admin',[AdminController::class,'index']);
-Route::get('/admin/search',[AdminController::class,'search']);
+Route::middleware('auth')->group(function(){
+    Route::get('/admin',[AdminController::class,'index']);
+    Route::get('/admin/search',[AdminController::class,'search']);
+});

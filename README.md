@@ -25,3 +25,15 @@ Laravel環境構築
 ・開発環境：http://localhost/
 ・phpMyAdmin：http://localhost:8080/
 
+## ER図
+test-hayakawa ディレクトリ直下の
+ER_graph.jpg を参照ください。
+
+## 備考
+実装ができなかった機能について記述いたします。
+[Adminページ]
+・csv形式にエクスポート
+・性別の検索
+・ページネーション
+[認証ページ]
+・フォームリクエストを使用したバリデーションメッセージ適用

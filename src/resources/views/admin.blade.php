@@ -43,8 +43,12 @@
     </div>
 
     <div class="admin__change-items">
-        <button class="admin__export-button" type="submit">エクスポート</button>
-        <div class="admin__pagination"></div>
+        <form action="" method="get">
+        @csrf
+            <button class="admin__export-button" type="submit">エクスポート</button>
+            <div class="admin__pagination"></div>
+        </form>
+        <div></div>
     </div>
 
     <div class="admin-table">
@@ -76,7 +80,7 @@
                     <div class="admin-table__text-mail">{{ $contact['email'] }}</div>
                     <div class="admin-table__text-contact">{{ $contact['category']['content'] }}</div>
                     <form class="admin-table__modal-window" action="">
-                        <button class="admin-table__modal-window--button">詳細</button>
+                        <button wire:click="openModal()" class="admin-table__modal-window--button">詳細</button>
                     </form>
                 </td>
             </tr>
