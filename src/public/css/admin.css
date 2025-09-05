@@ -19,6 +19,7 @@
     font-size: 36px;
     margin: 0 auto;
     text-align: center;
+    cursor: default;
 }
 
 .log-button {

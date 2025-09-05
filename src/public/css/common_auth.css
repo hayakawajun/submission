@@ -24,6 +24,7 @@ body {
     font-size: 36px;
     margin: 0 auto;
     text-align: center;
+    cursor: default;
 }
 
 .log-button {
@@ -39,6 +40,7 @@ body {
     right: 0;
     margin-right: 15%;
     text-decoration: none;
+    cursor: default;
 }
 
 .im-fell-double-pica-regular {
@@ -88,7 +90,7 @@ body {
 
 .register__form--item-input {
     width: 100%;
-    color: #c7c5c6;
+    color: #8e8e8e;
     background-color: #f5f5f5;
     font-size: 12px;
     padding: 10px 20px;
