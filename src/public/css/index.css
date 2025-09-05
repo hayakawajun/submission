@@ -14,12 +14,6 @@
     font-size: 30px;
 }
 
-.alike-angular-regular {
-    font-family: "Alike Angular", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 .form {
     margin: 0 auto;
     width: 65%;
@@ -76,10 +70,6 @@
     padding-left: 10px;
     padding-right: 30px;
     
-}
-
-.form__input--radio-button {
-
 }
 
 .form__input--address {

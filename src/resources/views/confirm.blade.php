@@ -4,9 +4,17 @@
 @endsection
 
 @section('content')
+<header class="header">
+    <div class="header__inner">
+        <a class="header__logo im-fell-double-pica-regular" href="/">
+        FashionablyLate
+        </a>
+    </div>
+</header>
+
     <div class="confirm__content">
       <div class="confirm__heading">
-        <h2 class="alike-angular-regular">Confirm</h2>
+        <h2 class="im-fell-double-pica-regular">Confirm</h2>
       </div>
       <form class="form" action="/contacts/store" method="post">
         @csrf

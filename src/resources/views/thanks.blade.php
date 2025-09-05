@@ -17,7 +17,7 @@
 <body>
   <main>
       <div class="thanks">
-        <div class="thanks__message alike-angular-regular">Thank you</div>
+        <div class="thanks__message im-fell-double-pica-regular">Thank you</div>
         <div class="thanks__content">
           <h2>お問い合わせありがとうございました</h2>
           <a class="thanks__button-return" href="/">HOME</a>

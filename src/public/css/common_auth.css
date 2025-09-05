@@ -1,22 +1,110 @@
+body {
+    min-height: 100vh;
+    background: #f2ece7;
+}
+
 .header {
-    border-bottom: solid 1px #f4f4f4;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: solid 1px #ececec;
 }
 
 .header__inner {
     margin: 0 auto;
     padding: 20px 15px;
     max-width: 1230px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__logo {
-    color: #88796b;
+    color: #877e73;
     text-decoration: none;
     font-size: 36px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.alike-angular-regular {
-    font-family: "Alike Angular", serif;
+.log-button {
+    padding : 2px 20px;
+    color: #d3c6bc;
+    background-color: #f6f6f4;
+    border: solid 1px #e4dbcd;
+    border-radius: 2px;
+    font-family: serif;
+    font-size: 14px;
+    display: block;
+    position: absolute;
+    right: 0;
+    margin-right: 15%;
+    text-decoration: none;
+}
+
+.im-fell-double-pica-regular {
+    font-family: "IM Fell Double Pica", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.im-fell-double-pica-regular-italic {
+    font-family: "IM Fell Double Pica", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.register__heading {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register__heading h2 {
+    font-size: 30px;
+    color: #877e73;
+}
+
+.register__content {
+    width: 500px;
+    background-color: #fff;
+    margin: 0 auto;
+    border: solid 1px #dfd9d5;
+    border-radius: 5px;
+}
+
+.register__form {
+    padding: 40px 90px 40px;
+}
+
+.register__form--item {
+    margin-bottom: 40px;
+}
+
+.register__form--item p {
+    color: #939086;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 10px;
+}
+
+.register__form--item-input {
+    width: 100%;
+    color: #c7c5c6;
+    background-color: #f5f5f5;
+    font-size: 12px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+}
+
+.register__form--button {
+    text-align: center;
+}
+
+.register__form--button-submit {
+    background-color: #82756b;
+    color: #fff;
+    padding: 5px 30px;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
 }

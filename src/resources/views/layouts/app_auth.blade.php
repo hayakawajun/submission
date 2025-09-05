@@ -2,27 +2,16 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> FashionablyLate</title>
-  <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
-  <link rel="stylesheet" href="{{ asset('css/common_auth.css') }}" />
-  @yield('css')
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> FashionablyLate</title>
+    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/common_auth.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=IM+Fell+Great+Primer:ital@0;1&display=swap" rel="stylesheet">
+    @yield('css')
 </head>
-
-<body>
-  <header class="header">
-    <div class="header__inner">
-      <a class="header__logo alike-angular-regular" href="">
-        FashionablyLate
-      </a>
-    </div>
-  </header>
-
-  <main>
-    @yield('content')
-  </main>
-</body>
-
+        @yield('content')
 </html>

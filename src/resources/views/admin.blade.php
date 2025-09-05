@@ -4,10 +4,17 @@
 @endsection
 
 @section('content')
+<header class="header">
+    <form class="header__inner" action="/logout" method="post">
+    @csrf
+        <a class="header__logo im-fell-double-pica-regular" href="">FashionablyLate</a>
+        <button class="log-button">logout</button>
+    </form>
+</header>
 
 <div class="admin__content">
     <div class="admin__heading">
-        <h2 class="alike-angular-regular">Admin</h2>
+        <h2 class="im-fell-double-pica-regular">Admin</h2>
     </div>
     
     <div class="admin__search-items">
@@ -78,5 +85,4 @@
     </div>
 
 </div>
-
 @endsection
