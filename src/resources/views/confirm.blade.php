@@ -16,7 +16,7 @@
       <div class="confirm__heading">
         <h2 class="im-fell-double-pica-regular">Confirm</h2>
       </div>
-      <form class="form" action="/contacts/store" method="post">
+      <form class="form" action="/thanks" method="post">
         @csrf
         <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}"/>
         <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}"/>

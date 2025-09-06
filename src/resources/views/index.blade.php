@@ -14,9 +14,9 @@
 
     <div class="contact-form__content">
       <div class="contact-form__heading">
-        <h2 class="im-fell-double-pica-regular">Contact1</h2>
+        <h2 class="im-fell-double-pica-regular">Contact</h2>
       </div>
-      <form class="form" action="/contacts/confirm" method="post">
+      <form class="form" action="/confirm" method="post">
         @csrf
         
         <div class="form__group">

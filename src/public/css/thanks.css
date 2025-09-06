@@ -1,27 +1,59 @@
-.thanks {
-    position: relative;
-    display: flex;    
-        align-items: center;
-        justify-content: center;
-
-}
-
-.thanks__message {
-    font-size: 200px;
-    margin: 0 auto;
-   
+.thanks__wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .thanks__content {
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
 }
 
-.alike-angular-regular {
-    font-family: "Alike Angular", serif;
+.thanks__content::before {
+    content: "Thank you";
+    font-size: 300px;
+    color: #f8f8f8;
+    font-family: "IM Fell Double Pica", serif;
     font-weight: 400;
     font-style: normal;
+    white-space: nowrap;
+    z-index: -1;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.thanks__content h2 {
+    font-size: 28px;
+    color: #897962;
+}
+
+.thanks__content-button--home {
+    display: inline-block;
+    background-color: #817669;
+    color: #fff;
+    font-family: "IM Fell Double Pica", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 40px;
+    text-decoration: none;
+    border-radius: 1px;
+    margin-top: 28px;
+
+}
+
+.im-fell-double-pica-regular {
+    font-family: "IM Fell Double Pica", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.im-fell-double-pica-regular-italic {
+    font-family: "IM Fell Double Pica", serif;
+    font-weight: 400;
+    font-style: italic;
 }
