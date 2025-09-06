@@ -26,7 +26,7 @@ Laravel環境構築
 ・phpMyAdmin：http://localhost:8080/
 
 ## ER図
-![ER図](./README_img/ER_graph.jpg)  
+![ER図](README_img/ER_graph.jpg)  
 画像が表示されない場合は test-hayakawa/README_img ディレクトリ直下の  
 ER_graph.jpg を参照してください。
 
