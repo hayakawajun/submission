@@ -26,16 +26,16 @@ Laravel環境構築
 ・phpMyAdmin：http://localhost:8080/
 
 ## ER図
-![ER図](/README_img/ER_graph.jpg)  
+![ER図](https://github.com/hayakawajun/submission/blob/main/image/test.png)  
 画像が表示されない場合は test-hayakawa/README_img ディレクトリ直下の  
 ER_graph.jpg を参照してください。
 
 ## 備考
 実装ができなかった機能について記述いたします。  
 [Adminページ]  
-・csv形式にエクスポート  
-・モーダルウインドウで詳細表示とデータ削除
-・性別の検索  
-・ページネーション  
+ 1.csv形式にエクスポート  
+ 2.モーダルウインドウで詳細表示とデータ削除
+ 3.性別の検索  
+ 4.ページネーション  
 [認証ページ]  
-・フォームリクエストを使用したバリデーションメッセージ適用  
+ 5.フォームリクエストを使用したバリデーションメッセージ適用  
