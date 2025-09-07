@@ -31,6 +31,10 @@ class Contact extends Model
         'detail' => 'required'
     ];
 
+    protected $casts =[
+        'gender' => 'integer'
+    ];
+
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -52,9 +56,11 @@ class Contact extends Model
 
     public function scopeGenderSearch($query,$gender)
     {
-        if($gender='1')    
-        $query->where('gender',1);
-        
+        if(!empty($gender)){
+            if($gender < 4){    
+            $query->where('gender',$gender);
+            }
+        }
     }
 
     public function scopeDateSearch($query,$date)

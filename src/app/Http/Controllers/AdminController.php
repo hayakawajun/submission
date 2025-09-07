@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Contact;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class AdminController extends Controller
 {
@@ -18,7 +19,8 @@ class AdminController extends Controller
 
     public function search(Request $request)
     {
-        $contacts = Contact::with('category')->CategorySearch($request->category_id)->DateSearch($request->date)->KeywordSearch($request->keyword)->get();
+        $contacts = Contact::with('category')->CategorySearch($request->category_id)->DateSearch($request->date)->KeywordSearch($request->keyword)->GenderSearch($request->gender)->get();
+
         $categories = Category::all();
 
         return view('admin',compact('contacts','categories'));
