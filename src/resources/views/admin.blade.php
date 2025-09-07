@@ -16,7 +16,7 @@
     <div class="admin__heading">
         <h2 class="im-fell-double-pica-regular">Admin</h2>
     </div>
-    
+
     <div class="admin__search-items">
         <form class="search-item" action="/admin/search" method="get">
         @csrf

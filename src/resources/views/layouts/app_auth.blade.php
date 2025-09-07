@@ -13,5 +13,5 @@
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=IM+Fell+Great+Primer:ital@0;1&display=swap" rel="stylesheet">
     @yield('css')
 </head>
-        @yield('content')
+    @yield('content')
 </html>
